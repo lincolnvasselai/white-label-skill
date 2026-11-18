@@ -4,8 +4,8 @@ description: >-
   Sets up a white-label brand on the White Label Design System (Core,
   Semantic, Layout, Typography, Components). Opens with Full setup or Skip
   setup. Full setup asks Colors, then Fonts. Skip setup builds the source
-  defaults. color/blue is the shade template. color/primary is the brand
-  ramp. Secondary and tertiary are new ramps. Creates 82 text styles and a button bound to
+  defaults. color/blue is the primary ramp and the shade template. Secondary
+  and tertiary are new ramps. Creates 82 text styles and a button bound to
   Components variables. Use when starting a design system, a new brand, white
   label tokens, variáveis, cores de marca, button, or fonte primária e
   secundária.
@@ -17,7 +17,7 @@ One Figma file per brand. The file keeps the source name. The wizard does not as
 
 Source file: the White Label Design System at `https://www.figma.com/design/bodT19MTa9LqB0qFgjYWK6/White-Label-%7C-Design-System`
 
-`color/blue` is the shade template. It stays on the source hexes. `color/primary` is the brand primary ramp, with the same steps. The source default copies each blue step, so nothing shifts until a brand hex replaces `color/primary`. `text/accent` and `icon/accent` alias `color/primary/500`. Button brand colors alias `color/primary`. A new primary replaces `color/primary` only. Do not write a brand color into `color/blue`. Read [references/brand-slots.md](references/brand-slots.md) before treating any other Core value as a brand color.
+`color/blue` in Core is the source default primary brand color and the shade template for any other brand ramp. Step `color/blue/500` (`#2457ff`) is the base. `text/accent` and `icon/accent` alias that step. A new primary replaces the whole ramp. Read [references/brand-slots.md](references/brand-slots.md) before treating any other Core value as a brand color.
 
 Read [references/structure.md](references/structure.md), [references/brand-slots.md](references/brand-slots.md), and [references/button.md](references/button.md) before asking questions or editing the file.
 
