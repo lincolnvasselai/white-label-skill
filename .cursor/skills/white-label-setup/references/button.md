@@ -58,30 +58,30 @@ Primary default and hover are linear gradients. The first stop is at 0.2 and the
 
 | Token | Aliases |
 | --- | --- |
-| `button/primary/default/fill-start` | `color/blue/600` |
-| `button/primary/default/fill-end` | `color/blue/400` |
+| `button/primary/default/fill-start` | `color/primary/600` |
+| `button/primary/default/fill-end` | `color/primary/400` |
 | `button/primary/default/label` | `color/gray/000` |
-| `button/primary/hover/fill-start` | `color/blue/400` |
-| `button/primary/hover/fill-end` | `color/blue/300` |
+| `button/primary/hover/fill-start` | `color/primary/400` |
+| `button/primary/hover/fill-end` | `color/primary/300` |
 | `button/primary/hover/label` | `color/gray/000` |
 | `button/primary/disabled/fill` | `color/gray/200` |
 | `button/primary/disabled/label` | `color/gray/000` |
-| `button/primary/focus/fill-start` | `color/blue/600` |
-| `button/primary/focus/fill-end` | `color/blue/400` |
+| `button/primary/focus/fill-start` | `color/primary/600` |
+| `button/primary/focus/fill-end` | `color/primary/400` |
 | `button/primary/focus/stroke` | `color/gray/000` |
 | `button/primary/focus/label` | `color/gray/000` |
 | `button/secondary/default/fill` | `color/gray/000` |
-| `button/secondary/default/stroke` | `color/blue/500` |
-| `button/secondary/default/label` | `color/blue/500` |
+| `button/secondary/default/stroke` | `color/primary/500` |
+| `button/secondary/default/label` | `color/primary/500` |
 | `button/secondary/hover/fill` | `color/gray/000` |
-| `button/secondary/hover/stroke` | `color/blue/300` |
-| `button/secondary/hover/label` | `color/blue/300` |
+| `button/secondary/hover/stroke` | `color/primary/300` |
+| `button/secondary/hover/label` | `color/primary/300` |
 | `button/secondary/disabled/fill` | `color/gray/000` |
 | `button/secondary/disabled/stroke` | `color/gray/200` |
 | `button/secondary/disabled/label` | `color/gray/200` |
 | `button/secondary/focus/fill` | `color/gray/000` |
-| `button/secondary/focus/stroke` | `color/blue/500` |
-| `button/secondary/focus/label` | `color/blue/500` |
+| `button/secondary/focus/stroke` | `color/primary/500` |
+| `button/secondary/focus/label` | `color/primary/500` |
 | `button/ghost-dark/default/fill` | `color/gray/000` |
 | `button/ghost-dark/default/stroke` | `color/gray/900` |
 | `button/ghost-dark/default/label` | `color/gray/900` |
@@ -92,7 +92,7 @@ Primary default and hover are linear gradients. The first stop is at 0.2 and the
 | `button/ghost-dark/disabled/stroke` | `color/gray/200` |
 | `button/ghost-dark/disabled/label` | `color/gray/200` |
 | `button/ghost-dark/focus/fill` | `color/gray/000` |
-| `button/ghost-dark/focus/stroke` | `color/blue/500` |
+| `button/ghost-dark/focus/stroke` | `color/primary/500` |
 | `button/ghost-dark/focus/label` | `color/gray/900` |
 | `button/ghost-light/default/stroke` | `color/gray/000` |
 | `button/ghost-light/default/label` | `color/gray/000` |
@@ -106,7 +106,7 @@ Primary default and hover are linear gradients. The first stop is at 0.2 and the
 
 Ghost light default, focus, and disabled have no fill. Do not invent a fill variable for them. `color/light-gamma/200` is white at 20% opacity.
 
-Focus keeps that type's default fill and label. Its stroke is a 2px ring, aligned outside, bound to `button/focus-stroke-width`. Primary and ghost light use a white ring. Secondary and ghost dark use `color/blue/500`.
+Focus keeps that type's default fill and label. Its stroke is a 2px ring, aligned outside, bound to `button/focus-stroke-width`. Primary and ghost light use a white ring. Secondary and ghost dark use `color/primary/500`.
 
 Do not copy example hexes that are not tokens (`#2b85c3`, `#37a6f3`, `#474747`, `#adadad`).
 

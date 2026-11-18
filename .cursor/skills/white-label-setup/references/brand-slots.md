@@ -4,9 +4,9 @@ The source file is the White Label Design System. The wizard replaces the brand 
 
 ## Default primary color
 
-`color/blue` is the source default primary brand color, stored in Core. It is also the shade template. Step 500 is `#0092d8`. The other steps are shades of that hex. See [structure.md](structure.md).
+`color/blue` is the shade template, stored in Core. Step 500 is `#0092d8`. The other steps are shades of that hex. See [structure.md](structure.md). Leave `color/blue` on those source hexes.
 
-A new primary brand color replaces this whole ramp. `text/accent` and `icon/accent` keep aliasing `color/blue/500`.
+`color/primary` is the brand primary ramp. It uses the same steps. The source default copies each blue hex into the matching `color/primary` step. A new primary brand color replaces `color/primary` only. `text/accent` and `icon/accent` alias `color/primary/500`. Button brand colors alias `color/primary`.
 
 ## How a brand hex becomes a ramp
 
@@ -40,7 +40,7 @@ A pasted ramp replaces the steps they send. Any step they leave out is still gen
 
 | Order | Role in the file | Ramp | Semantic tokens that follow it | In the source file |
 | --- | --- | --- | --- | --- |
-| Primary | Accent | `color/blue` | `text/accent`, `icon/accent` on step `500` | Source default `#0092d8` and its shades |
+| Primary | Accent | `color/primary` | `text/accent`, `icon/accent` on step `500`. Button brand colors use the matching step | Source default copies `color/blue` |
 | Secondary | Extra brand ramp | `color/secondary` | None during setup | Created only when they ask for 2 or 3 colors |
 | Tertiary | Extra brand ramp | `color/tertiary` | None during setup | Created only when they ask for 3 colors |
 
@@ -74,6 +74,6 @@ With 1 font, set primary and set secondary to the same family so the placeholder
 
 For each written token: name, new value, and the aliases that resolve through it.
 
-For each generated `color/blue`, `color/secondary`, or `color/tertiary` step: the token name and the hex.
+For each generated `color/primary`, `color/secondary`, or `color/tertiary` step: the token name and the hex. `color/blue` stays on the source hexes.
 
 For each functional ramp left unchanged: the ramp name and that it stays on the source default.

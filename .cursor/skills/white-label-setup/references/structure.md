@@ -6,7 +6,7 @@ Copied from the White Label Design System file. Names, modes, and aliases below 
 
 | Collection | Modes | Default | Variables | Holds |
 | --- | --- | --- | --- | --- |
-| Core | Mode 1 | Mode 1 | 173 | Raw values. No aliases except gamma colors |
+| Core | Mode 1 | Mode 1 | 185 | Raw values. No aliases except gamma colors |
 | Semantic | Light, Dark | Light | 41 | Color, radius, and border-width aliases into Core |
 | Layout | Desktop, Mobile | Desktop | 17 | Grid numbers and spacing aliases |
 | Typography | Desktop, Mobile | Desktop | 390 | Composite type aliases into Core |
@@ -37,7 +37,9 @@ Float value equals the number in the name, except letter-spacing (the signed fra
 
 ### Color ramps
 
-`color/blue` is the source default primary brand color and the shade template for a new brand ramp. The base is 500 `#0092d8`, aliased by `text/accent` and `icon/accent`. The other steps are shades of that hex. Full ramp: 000 `#f3fbff`, 050 `#e2f6ff`, 100 `#c7edfc`, 200 `#9ddef5`, 300 `#6ccbec`, 400 `#35b4e2`, 500 `#0092d8`, 600 `#007bb9`, 700 `#006398`, 800 `#004b74`, 900 `#00284c`, 950 `#001b34`
+`color/blue` is the shade template. Leave it on the source hexes. Full ramp: 000 `#f3fbff`, 050 `#e2f6ff`, 100 `#c7edfc`, 200 `#9ddef5`, 300 `#6ccbec`, 400 `#35b4e2`, 500 `#0092d8`, 600 `#007bb9`, 700 `#006398`, 800 `#004b74`, 900 `#00284c`, 950 `#001b34`
+
+`color/primary` is the brand primary ramp. Same steps as `color/blue`. The source default copies each blue hex. `text/accent` and `icon/accent` alias step 500. A brand hex replaces this ramp, not `color/blue`.
 
 `color/azure` is links and info. Leave it during brand setup. Steps: 100 `#e8f4ff`, 200 `#bddcff`, 300 `#3a82ff`, 400 `#0f5fff`, 500 `#0946d2`
 
@@ -70,7 +72,7 @@ Every token aliases Core. Light and Dark match, except the three rows marked Dar
 | `border-radius/primary` | CORNER_RADIUS | `radius/4` |
 | `border-width/none` | ALL_SCOPES | `border/0` |
 | `border-width/primary` | ALL_SCOPES | `border/1` |
-| `icon/accent` | SHAPE_FILL | `color/blue/500` |
+| `icon/accent` | SHAPE_FILL | `color/primary/500` |
 | `icon/danger` | SHAPE_FILL | Light `color/red/400`, Dark `color/gray/000` |
 | `icon/danger-inverse` | SHAPE_FILL | `color/gray/000` |
 | `icon/disabled` | SHAPE_FILL | `color/gray/400` |
@@ -88,7 +90,7 @@ Every token aliases Core. Light and Dark match, except the three rows marked Dar
 | `surface/primary` | FRAME_FILL | `color/gray/000` |
 | `surface/success` | FRAME_FILL | `color/green/500` |
 | `surface/warning` | FRAME_FILL | `color/orange/500` |
-| `text/accent` | TEXT_FILL | `color/blue/500` |
+| `text/accent` | TEXT_FILL | `color/primary/500` |
 | `text/danger` | FRAME_FILL | `color/red/400` |
 | `text/danger-inverted` | FRAME_FILL | `color/gray/000` |
 | `text/disabled` | TEXT_FILL | `color/gray/400` |
@@ -166,7 +168,7 @@ Line-height cells are default / snug / comfortable, in px.
 
 Text style names match these paths. Display and heading insert a space before the step: `display 01/bold/default`, `heading 06/regular/snug`.
 
-Four button text styles sit outside this ramp. Names and bindings are in [button.md](button.md). Size 18 and line heights `19,2`, `21,6`, and `28,8` exist so those styles can bind. The comma stands in for a decimal because a period is not a legal variable name. They are the four Core tokens added on top of the source count of 169.
+Four button text styles sit outside this ramp. Names and bindings are in [button.md](button.md). Size 18 and line heights `19,2`, `21,6`, and `28,8` exist so those styles can bind. The comma stands in for a decimal because a period is not a legal variable name. Those four type tokens, plus the 12 `color/primary` steps, sit on top of the source count of 169.
 
 `color/secondary` and `color/tertiary` are not in the source file. Create each one, with the same steps as `color/blue`, only when the wizard asks for that brand color. Generate the shades from [brand-slots.md](brand-slots.md). Do not point Semantic tokens at them.
 
