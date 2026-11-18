@@ -1,16 +1,26 @@
 # Brand slots
 
-The wizard writes here. Everything else stays on the template in [structure.md](structure.md).
+The source file is the White Label Design System. The wizard replaces the source brand slots. Shared scales stay as documented in [structure.md](structure.md).
+
+## Default primary color
+
+`color/blue` is the source default primary brand color, stored in Core. Step 500 is `#0092d8`. The other steps are shades of that hex. See [structure.md](structure.md).
+
+A new primary brand color replaces this ramp.
+
+- One hex replaces `color/blue/500` only. The token name stays `color/blue/500` so `text/accent` and `icon/accent` keep resolving.
+- A pasted ramp replaces each step the user provides.
+- A step left unchanged still holds its source default shade. The plan names those steps.
 
 ## Colors
 
 A single hex updates the base step only. Lighter and darker steps stay until the user pastes them.
 
-| Order | Role in the file | Base token | Semantic tokens that follow it |
-| --- | --- | --- | --- |
-| Primary | Accent | `color/blue/500` | `text/accent`, `icon/accent` |
-| Secondary | Links | `color/azure/500` | `text/link` |
-| Tertiary | Visited link | `color/purple/purple-500` | `text/link-visited` |
+| Order | Role in the file | Base token | Semantic tokens that follow it | In the source file |
+| --- | --- | --- | --- | --- |
+| Primary | Accent | `color/blue/500` | `text/accent`, `icon/accent` | Source default `#0092d8` and its shades |
+| Secondary | Links | `color/azure/500` | `text/link` | Link color in the source file |
+| Tertiary | Visited link | `color/purple/purple-500` | `text/link-visited` | Visited-link color in the source file |
 
 Related steps that do **not** move when only the base hex is set:
 
@@ -41,4 +51,4 @@ With 1 font, set primary and set secondary to the same family so the placeholder
 
 For each written token: name, new value, and the aliases that resolve through it.
 
-For each skipped step: the token name and that it stays on the template.
+For each skipped step: the token name and the source default it keeps.
