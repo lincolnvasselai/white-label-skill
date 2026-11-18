@@ -6,10 +6,11 @@ Copied from the White Label Design System file. Names, modes, and aliases below 
 
 | Collection | Modes | Default | Variables | Holds |
 | --- | --- | --- | --- | --- |
-| Core | Mode 1 | Mode 1 | 169 | Raw values. No aliases except gamma colors |
+| Core | Mode 1 | Mode 1 | 173 | Raw values. No aliases except gamma colors |
 | Semantic | Light, Dark | Light | 41 | Color, radius, and border-width aliases into Core |
 | Layout | Desktop, Mobile | Desktop | 17 | Grid numbers and spacing aliases |
 | Typography | Desktop, Mobile | Desktop | 390 | Composite type aliases into Core |
+| Components | Mode 1 | Mode 1 | 52 | Button size, gap, radius, stroke, and paints. See [button.md](button.md) |
 
 Desktop/Mobile exist on both Layout and Typography. A frame needs both modes set.
 
@@ -27,28 +28,28 @@ kebab-case, grouped with `/`.
 | Spacing | `spacing/{n}` | 0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 80 |
 | Dimension | `dimension/{n}` | 1, 2, 4, 6, 8, 12, 16, 18, 20, 21, 24, 28, 32, 36, 40, 44, 48, 56 |
 | Type family | `typography/font-family/{role}` | primary, secondary |
-| Type size | `typography/font-size/{px}` | 10, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 56, 64 |
+| Type size | `typography/font-size/{px}` | 10, 12, 16, 18, 20, 24, 28, 32, 36, 40, 44, 48, 56, 64 |
 | Type weight | `typography/font-weight/{name}` | regular `Regular`, medium `medium`, bold `Bold` |
 | Tracking | `typography/letter-spacing/{name}` | `-0,01` `-0.01`, `-0,02` `-0.02`, `0` `0`, `0,01` `0.01`, `0,02` `0.02` |
-| Line height | `typography/line-height/{px}` | 10, 12, 14, 16, 18, 20, 21, 22, 24, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 52, 54, 56, 58, 60, 64, 66, 68, 72, 76, 84, 96, 98 |
+| Line height | `typography/line-height/{px}` | 10, 12, 14, 16, 18, 19.2, 20, 21, 21.6, 22, 24, 28, 28.8, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 52, 54, 56, 58, 60, 64, 66, 68, 72, 76, 84, 96, 98 |
 
 Float value equals the number in the name, except letter-spacing (the signed fraction) and weights/families (strings).
 
 ### Color ramps
 
-`color/blue` is the source default primary brand color. The base is 500 `#0092d8`, aliased by `text/accent` and `icon/accent`. The other steps are shades of that hex. Full ramp: 000 `#f3fbff`, 050 `#e2f6ff`, 100 `#c7edfc`, 200 `#9ddef5`, 300 `#6ccbec`, 400 `#35b4e2`, 500 `#0092d8`, 600 `#007bb9`, 700 `#006398`, 800 `#004b74`, 900 `#00284c`, 950 `#001b34`
+`color/blue` is the source default primary brand color and the shade template for a new brand ramp. The base is 500 `#0092d8`, aliased by `text/accent` and `icon/accent`. The other steps are shades of that hex. Full ramp: 000 `#f3fbff`, 050 `#e2f6ff`, 100 `#c7edfc`, 200 `#9ddef5`, 300 `#6ccbec`, 400 `#35b4e2`, 500 `#0092d8`, 600 `#007bb9`, 700 `#006398`, 800 `#004b74`, 900 `#00284c`, 950 `#001b34`
 
-`color/azure`: 100 `#e8f4ff`, 200 `#bddcff`, 300 `#3a82ff`, 400 `#0f5fff`, 500 `#0946d2`
+`color/azure` is links and info. Leave it during brand setup. Steps: 100 `#e8f4ff`, 200 `#bddcff`, 300 `#3a82ff`, 400 `#0f5fff`, 500 `#0946d2`
 
-`color/gray`: 000 `#ffffff`, 025 `#fafafa`, 050 `#f5f5f5`, 100 `#eaeaea`, 200 `#d6d6d6`, 300 `#c1c1c1`, 400 `#acacac`, 500 `#969696`, 600 `#808080`, 700 `#6b6b6b`, 800 `#575757`, 900 `#454545`, 980 `#333333`, 1000 `#000000`
+`color/gray` is neutral. Leave it during brand setup. Steps: 000 `#ffffff`, 025 `#fafafa`, 050 `#f5f5f5`, 100 `#eaeaea`, 200 `#d6d6d6`, 300 `#c1c1c1`, 400 `#acacac`, 500 `#969696`, 600 `#808080`, 700 `#6b6b6b`, 800 `#575757`, 900 `#454545`, 980 `#333333`, 1000 `#000000`
 
-`color/green`: 100 `#e8ffec`, 200 `#aff0bc`, 300 `#24c454`, 400 `#00b53c`, 500 `#009b39`
+`color/green` is success. Leave it during brand setup. Steps: 100 `#e8ffec`, 200 `#aff0bc`, 300 `#24c454`, 400 `#00b53c`, 500 `#009b39`
 
-`color/orange`: 100 `#fff7e8`, 200 `#ffe3ba`, 300 `#ff972e`, 400 `#ff7700`, 500 `#d25b00`
+`color/orange` is warning. Leave it during brand setup. Steps: 100 `#fff7e8`, 200 `#ffe3ba`, 300 `#ff972e`, 400 `#ff7700`, 500 `#d25b00`
 
-`color/red`: 100 `#ffece8`, 200 `#fbc3ba`, 300 `#f13d36`, 400 `#ed0d0d`, 500 `#c5080e`
+`color/red` is danger. Leave it during brand setup. Steps: 100 `#ffece8`, 200 `#fbc3ba`, 300 `#f13d36`, 400 `#ed0d0d`, 500 `#c5080e`
 
-`color/purple/purple-500`: `#551a8b`
+`color/purple/purple-500` is the visited link (`#551a8b`). Leave it during brand setup. A brand tertiary color is `color/tertiary`, not this token.
 
 `color/dark-gamma/{step}` aliases `color/gray/980` with opacity. Steps: 040, 080, 120, 160, 200, 320, 440, 560, 720, 880. The stored opacity number matches the step (`040` → 4).
 
@@ -165,6 +166,14 @@ Line-height cells are default / snug / comfortable, in px.
 
 Text style names match these paths. Display and heading insert a space before the step: `display 01/bold/default`, `heading 06/regular/snug`.
 
+Four button text styles sit outside this ramp. Names and bindings are in [button.md](button.md). Size 18 and line heights 19.2, 21.6, and 28.8 exist so those styles can bind. They are the four Core tokens added on top of the source count of 169.
+
+`color/secondary` and `color/tertiary` are not in the source file. Create each one, with the same steps as `color/blue`, only when the wizard asks for that brand color. Generate the shades from [brand-slots.md](brand-slots.md). Do not point Semantic tokens at them.
+
+## Components
+
+52 variables, mode `Mode 1`. Button size, gap, radius, stroke, and paints. Every color aliases Core. The token list, scopes, and the `button` component are in [button.md](button.md).
+
 ## Known gaps to copy as-is
 
 Leave these alone during setup unless the user asks to change them.
@@ -172,7 +181,7 @@ Leave these alone during setup unless the user asks to change them.
 - Dark matches Light on 38 of 41 semantic tokens. Only `icon/danger`, `icon/info`, and `icon/warning` change, and they alias `color/gray/000`.
 - `icon/succes-inverse` is missing an `s`. Inverse suffixes mix `-inverse` and `-inverted`.
 - `color/purple/purple-500` repeats the ramp name. `measure/max width` and `measure/min width` contain a space.
-- `typography/font-weight/medium` is the string `medium`. `typography/font-family/secondary` is `String value` until the wizard replaces it.
+- `typography/font-weight/medium` is the string `medium` in the source file. Button setup sets it to `Medium` before binding button labels. `typography/font-family/secondary` is `String value` until the wizard replaces it.
 - Letter-spacing names use a comma (`-0,01`).
 - Several text tokens use scope `FRAME_FILL`.
 - `default` line-height equals the font size. `snug` is looser than `default`. `comfortable` is the loosest.
