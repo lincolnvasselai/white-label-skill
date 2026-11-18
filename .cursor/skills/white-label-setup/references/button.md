@@ -54,20 +54,17 @@ Padding left and right use `padding-x`. Padding top and bottom use `padding-y`. 
 
 Color variables in Components alias Core. They do not store a raw hex. Fill variables are scoped to frame fill and shape fill. Stroke variables are scoped to stroke. Label variables are scoped to text fill.
 
-Primary default and hover are linear gradients. The first stop is at 0.2 and the second stop is at 1. Bind those stops to `fill-start` and `fill-end`.
+Every fill is one solid paint. Bind it to a single color variable. Do not use a gradient.
 
 | Token | Aliases |
 | --- | --- |
-| `button/primary/default/fill-start` | `color/blue/600` |
-| `button/primary/default/fill-end` | `color/blue/400` |
+| `button/primary/default/fill` | `color/blue/500` |
 | `button/primary/default/label` | `color/gray/000` |
-| `button/primary/hover/fill-start` | `color/blue/400` |
-| `button/primary/hover/fill-end` | `color/blue/300` |
+| `button/primary/hover/fill` | `color/blue/400` |
 | `button/primary/hover/label` | `color/gray/000` |
 | `button/primary/disabled/fill` | `color/gray/200` |
 | `button/primary/disabled/label` | `color/gray/000` |
-| `button/primary/focus/fill-start` | `color/blue/600` |
-| `button/primary/focus/fill-end` | `color/blue/400` |
+| `button/primary/focus/fill` | `color/blue/500` |
 | `button/primary/focus/stroke` | `color/gray/000` |
 | `button/primary/focus/label` | `color/gray/000` |
 | `button/secondary/default/fill` | `color/gray/000` |

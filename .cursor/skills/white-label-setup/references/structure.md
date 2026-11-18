@@ -10,7 +10,7 @@ Copied from the White Label Design System file. Names, modes, and aliases below 
 | Semantic | Light, Dark | Light | 41 | Color, radius, and border-width aliases into Core |
 | Layout | Desktop, Mobile | Desktop | 17 | Grid numbers and spacing aliases |
 | Typography | Desktop, Mobile | Desktop | 390 | Composite type aliases into Core |
-| Components | Mode 1 | Mode 1 | 65 | Button size, gap, radius, stroke, focus ring, and paints. See [button.md](button.md) |
+| Components | Mode 1 | Mode 1 | 62 | Button size, gap, radius, stroke, focus ring, and paints. See [button.md](button.md) |
 
 Desktop/Mobile exist on both Layout and Typography. A frame needs both modes set.
 
@@ -172,7 +172,7 @@ Four button text styles sit outside this ramp. Names and bindings are in [button
 
 ## Components
 
-65 variables, mode `Mode 1`. Button size, gap, radius, stroke, focus ring, and paints. Every color aliases Core. The token list, scopes, and the `button` component are in [button.md](button.md).
+62 variables, mode `Mode 1`. Button size, gap, radius, stroke, focus ring, and paints. Every color aliases Core. The token list, scopes, and the `button` component are in [button.md](button.md).
 
 ## Known gaps to copy as-is
 
