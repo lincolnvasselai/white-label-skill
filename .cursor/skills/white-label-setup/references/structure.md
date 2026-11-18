@@ -36,7 +36,7 @@ Float value equals the number in the name, except letter-spacing (the signed fra
 
 ### Color ramps
 
-`color/blue`: 000 `#f3fbff`, 050 `#e2f6ff`, 100 `#c7edfc`, 200 `#9ddef5`, 300 `#6ccbec`, 400 `#35b4e2`, 500 `#0092d8`, 600 `#007bb9`, 700 `#006398`, 800 `#004b74`, 900 `#00284c`, 950 `#001b34`
+`color/blue` is the source default primary brand color. The base is 500 `#0092d8`, aliased by `text/accent` and `icon/accent`. The other steps are shades of that hex. Full ramp: 000 `#f3fbff`, 050 `#e2f6ff`, 100 `#c7edfc`, 200 `#9ddef5`, 300 `#6ccbec`, 400 `#35b4e2`, 500 `#0092d8`, 600 `#007bb9`, 700 `#006398`, 800 `#004b74`, 900 `#00284c`, 950 `#001b34`
 
 `color/azure`: 100 `#e8f4ff`, 200 `#bddcff`, 300 `#3a82ff`, 400 `#0f5fff`, 500 `#0946d2`
 
@@ -54,7 +54,7 @@ Float value equals the number in the name, except letter-spacing (the signed fra
 
 `color/light-gamma/{step}` aliases `color/gray/000` the same way. Steps: 050, 080, 120, 160, 200, 320, 440, 560, 720, 880.
 
-Template families: primary `Montserrat`, secondary `String value`.
+Source default families: primary `Montserrat`, secondary `String value`.
 
 ## Semantic
 

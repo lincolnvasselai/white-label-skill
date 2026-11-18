@@ -1,19 +1,22 @@
 ---
 name: white-label-setup
 description: >-
-  Sets up a new white-label brand on the White Label Design System variable
-  structure (Core, Semantic, Layout, Typography). Asks how many brand colors
-  and fonts the brand has, which are primary, secondary, and tertiary, then
-  writes those values into the existing tokens. Use when starting a design
-  system, a new brand, white label tokens, variáveis, cores de marca, or
-  fonte primária e secundária.
+  Sets up a new white-label brand on the White Label Design System
+  (Core, Semantic, Layout, Typography). The Core color/blue ramp is the
+  source default primary brand color. Asks how many brand colors and fonts
+  the new brand has, which are primary, secondary, and tertiary, then
+  replaces those source brand slots. Unchanged tokens keep the source
+  defaults. Use when starting a design system, a new brand, white label
+  tokens, variáveis, cores de marca, or fonte primária e secundária.
 ---
 
 # White label setup
 
 One Figma file per brand. The variable structure stays fixed. The wizard collects the brand, then writes only the brand slots.
 
-Source file: `https://www.figma.com/design/tAVy1duQqnqRCYEhc1SA1l/White-Label-%7C-Design-System`
+Source file: the White Label Design System at `https://www.figma.com/design/tAVy1duQqnqRCYEhc1SA1l/White-Label-%7C-Design-System`
+
+`color/blue` in Core is the source default primary brand color. Step `color/blue/500` is the base. A new brand replaces that ramp. Read [references/brand-slots.md](references/brand-slots.md) before treating any other Core value as a brand color.
 
 Read [references/structure.md](references/structure.md) and [references/brand-slots.md](references/brand-slots.md) before asking questions or editing variables.
 
@@ -23,7 +26,7 @@ Ask in the user's language. Use AskQuestion for every choice. Hex values, font n
 
 Ask in this order:
 
-1. Brand or client name.
+1. Brand name. This is the name of the new file.
 2. How many brand colors? Options: `1 color`, `2 colors`, `3 colors`. More than 3 uses Other.
 3. For each color, in order primary, then secondary, then tertiary: the base hex. If they already have a ramp, they paste the steps in Other. A single hex fills only the base slot in [brand-slots.md](references/brand-slots.md).
 4. How many font families? Options: `1 font`, `2 fonts`, `3 fonts`. More than 3 uses Other.
@@ -38,7 +41,7 @@ Then show the plan and wait:
 | typography/font-family/primary | Gotham | every text style |
 ```
 
-Include a line for each slot you will change and a line for each ramp step you will leave on the template. Apply only after they confirm.
+Include a line for each slot you will change and a line for each ramp step you will leave on the source default. Apply only after they confirm.
 
 ## Apply
 
@@ -67,4 +70,4 @@ Style name equals the variable path, with one exception: display and heading use
 
 ## Done
 
-Report the brand name, the tokens written, the tokens left on the template, and the Figma file link.
+Report the brand name, the tokens written, the tokens still holding source defaults, and the Figma file link.
