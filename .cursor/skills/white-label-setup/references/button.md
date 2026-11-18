@@ -30,6 +30,7 @@ Number variables in Components. Height, padding, and icon use scope `WIDTH_HEIGH
 | `button/gap` | 8 |
 | `button/radius` | 32 |
 | `button/stroke-width` | 1 |
+| `button/focus-stroke-width` | 2 |
 | `button/extra-large/height` | 64 |
 | `button/extra-large/padding-x` | 32 |
 | `button/extra-large/padding-y` | 16 |
@@ -65,6 +66,10 @@ Primary default and hover are linear gradients. The first stop is at 0.2 and the
 | `button/primary/hover/label` | `color/gray/000` |
 | `button/primary/disabled/fill` | `color/gray/200` |
 | `button/primary/disabled/label` | `color/gray/000` |
+| `button/primary/focus/fill-start` | `color/blue/600` |
+| `button/primary/focus/fill-end` | `color/blue/400` |
+| `button/primary/focus/stroke` | `color/gray/000` |
+| `button/primary/focus/label` | `color/gray/000` |
 | `button/secondary/default/fill` | `color/gray/000` |
 | `button/secondary/default/stroke` | `color/blue/500` |
 | `button/secondary/default/label` | `color/blue/500` |
@@ -74,6 +79,9 @@ Primary default and hover are linear gradients. The first stop is at 0.2 and the
 | `button/secondary/disabled/fill` | `color/gray/000` |
 | `button/secondary/disabled/stroke` | `color/gray/200` |
 | `button/secondary/disabled/label` | `color/gray/200` |
+| `button/secondary/focus/fill` | `color/gray/000` |
+| `button/secondary/focus/stroke` | `color/blue/500` |
+| `button/secondary/focus/label` | `color/blue/500` |
 | `button/ghost-dark/default/fill` | `color/gray/000` |
 | `button/ghost-dark/default/stroke` | `color/gray/900` |
 | `button/ghost-dark/default/label` | `color/gray/900` |
@@ -83,6 +91,9 @@ Primary default and hover are linear gradients. The first stop is at 0.2 and the
 | `button/ghost-dark/disabled/fill` | `color/gray/000` |
 | `button/ghost-dark/disabled/stroke` | `color/gray/200` |
 | `button/ghost-dark/disabled/label` | `color/gray/200` |
+| `button/ghost-dark/focus/fill` | `color/gray/000` |
+| `button/ghost-dark/focus/stroke` | `color/blue/500` |
+| `button/ghost-dark/focus/label` | `color/gray/900` |
 | `button/ghost-light/default/stroke` | `color/gray/000` |
 | `button/ghost-light/default/label` | `color/gray/000` |
 | `button/ghost-light/hover/fill` | `color/light-gamma/200` |
@@ -90,8 +101,12 @@ Primary default and hover are linear gradients. The first stop is at 0.2 and the
 | `button/ghost-light/hover/label` | `color/gray/000` |
 | `button/ghost-light/disabled/stroke` | `color/gray/200` |
 | `button/ghost-light/disabled/label` | `color/gray/200` |
+| `button/ghost-light/focus/stroke` | `color/gray/000` |
+| `button/ghost-light/focus/label` | `color/gray/000` |
 
-Ghost light default and disabled have no fill. Do not invent a fill variable for them. `color/light-gamma/200` is white at 20% opacity.
+Ghost light default, focus, and disabled have no fill. Do not invent a fill variable for them. `color/light-gamma/200` is white at 20% opacity.
+
+Focus keeps that type's default fill and label. Its stroke is a 2px ring, aligned outside, bound to `button/focus-stroke-width`. Primary and ghost light use a white ring. Secondary and ghost dark use `color/blue/500`.
 
 Do not copy example hexes that are not tokens (`#2b85c3`, `#37a6f3`, `#474747`, `#adadad`).
 
@@ -101,12 +116,12 @@ One set named `button`. Variant properties, in order: `size`, `type`, `status`.
 
 - `size`: `extra large`, `large`, `medium`, `small`
 - `type`: `primary`, `secondary`, `ghost dark`, `ghost light`
-- `status`: `default`, `hover`, `disabled`
+- `status`: `default`, `hover`, `disabled`, `focus`
 
 Boolean properties, default true: `show left icon`, `show right icon`.
 
-Each variant is a horizontal auto-layout frame. Primary and counter alignment are center. Height is fixed from the size token. Width hugs the label and icons. Stroke weight is `button/stroke-width`. Gap is `button/gap`. Corner radius is `button/radius`.
+Each variant is a horizontal auto-layout frame. Primary and counter alignment are center. Height is fixed from the size token. Width hugs the label and icons. Bind `strokeTopWeight`, `strokeBottomWeight`, `strokeLeftWeight`, and `strokeRightWeight` to `button/stroke-width`. Focus binds those four sides to `button/focus-stroke-width` and sets `strokeAlign` to `OUTSIDE`. Gap is `button/gap`. Corner radius is `button/radius`.
 
 Children, in order: left icon instance, text layer named `Label` with the characters `Label`, right icon instance. The booleans control the two icons. The label uses the text style for that size. Icon width and height use that size's `icon` token.
 
-48 variants. Place the set on the Buttons page. Return the component set id and the variant count.
+64 variants. Place the set on the Buttons page. Return the component set id and the variant count.
