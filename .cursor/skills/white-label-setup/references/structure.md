@@ -31,7 +31,7 @@ kebab-case, grouped with `/`.
 | Type size | `typography/font-size/{px}` | 10, 12, 16, 18, 20, 24, 28, 32, 36, 40, 44, 48, 56, 64 |
 | Type weight | `typography/font-weight/{name}` | regular `Regular`, medium `medium`, bold `Bold` |
 | Tracking | `typography/letter-spacing/{name}` | `-0,01` `-0.01`, `-0,02` `-0.02`, `0` `0`, `0,01` `0.01`, `0,02` `0.02` |
-| Line height | `typography/line-height/{px}` | 10, 12, 14, 16, 18, 19.2, 20, 21, 21.6, 22, 24, 28, 28.8, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 52, 54, 56, 58, 60, 64, 66, 68, 72, 76, 84, 96, 98 |
+| Line height | `typography/line-height/{px}` | 10, 12, 14, 16, 18, 19,2, 20, 21, 21,6, 22, 24, 28, 28,8, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 52, 54, 56, 58, 60, 64, 66, 68, 72, 76, 84, 96, 98 |
 
 Float value equals the number in the name, except letter-spacing (the signed fraction) and weights/families (strings).
 
@@ -166,7 +166,7 @@ Line-height cells are default / snug / comfortable, in px.
 
 Text style names match these paths. Display and heading insert a space before the step: `display 01/bold/default`, `heading 06/regular/snug`.
 
-Four button text styles sit outside this ramp. Names and bindings are in [button.md](button.md). Size 18 and line heights 19.2, 21.6, and 28.8 exist so those styles can bind. They are the four Core tokens added on top of the source count of 169.
+Four button text styles sit outside this ramp. Names and bindings are in [button.md](button.md). Size 18 and line heights `19,2`, `21,6`, and `28,8` exist so those styles can bind. The comma stands in for a decimal because a period is not a legal variable name. They are the four Core tokens added on top of the source count of 169.
 
 `color/secondary` and `color/tertiary` are not in the source file. Create each one, with the same steps as `color/blue`, only when the wizard asks for that brand color. Generate the shades from [brand-slots.md](brand-slots.md). Do not point Semantic tokens at them.
 

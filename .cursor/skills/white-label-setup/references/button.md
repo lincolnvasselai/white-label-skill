@@ -12,14 +12,14 @@ Every paint, size, radius, gap, stroke, and label comes from a variable or a tex
 
 One local text style per size. Bind family to `typography/font-family/primary`, font style to `typography/font-weight/medium`, letter spacing to `typography/letter-spacing/0`. Before binding, set `typography/font-weight/medium` to the string `Medium` so the style matches a Figma font.
 
-Size and line height bind to Core. Add the missing tokens first: `typography/font-size/18`, `typography/line-height/19.2`, `typography/line-height/21.6`, `typography/line-height/28.8`. Size 16, 20, and 24 and line height 24 already exist. Line height is 1.2 times the size.
+Size and line height bind to Core. Add the missing tokens first: `typography/font-size/18`, `typography/line-height/19,2`, `typography/line-height/21,6`, `typography/line-height/28,8`. Figma rejects a period in a variable name, so the decimal line heights use a comma, the same way letter-spacing does. The stored numbers are 19.2, 21.6, and 28.8. Size 16, 20, and 24 and line height 24 already exist. Line height is 1.2 times the size.
 
 | Style | Size token | Line-height token |
 | --- | --- | --- |
-| `button/extra large` | `typography/font-size/24` | `typography/line-height/28.8` |
+| `button/extra large` | `typography/font-size/24` | `typography/line-height/28,8` |
 | `button/large` | `typography/font-size/20` | `typography/line-height/24` |
-| `button/medium` | `typography/font-size/18` | `typography/line-height/21.6` |
-| `button/small` | `typography/font-size/16` | `typography/line-height/19.2` |
+| `button/medium` | `typography/font-size/18` | `typography/line-height/21,6` |
+| `button/small` | `typography/font-size/16` | `typography/line-height/19,2` |
 
 ## Size and shape
 
