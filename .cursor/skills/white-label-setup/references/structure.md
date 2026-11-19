@@ -6,11 +6,11 @@ Copied from the White Label Design System file. Names, modes, and aliases below 
 
 | Collection | Modes | Default | Variables | Holds |
 | --- | --- | --- | --- | --- |
-| Core | Mode 1 | Mode 1 | 173 | Raw values. No aliases except gamma colors |
+| Core | Mode 1 | Mode 1 | 174 | Raw values. No aliases except gamma colors |
 | Semantic | Light, Dark | Light | 41 | Color, radius, and border-width aliases into Core |
 | Layout | Desktop, Mobile | Desktop | 17 | Grid numbers and spacing aliases |
 | Typography | Desktop, Mobile | Desktop | 390 | Composite type aliases into Core |
-| Components | Mode 1 | Mode 1 | 62 | Button size, gap, radius, stroke, focus ring, and paints. See [button.md](button.md) |
+| Components | Mode 1 | Mode 1 | 64 | Button size, gap, radius, stroke, focus ring, and paints. See [button.md](button.md) |
 
 Desktop/Mobile exist on both Layout and Typography. A frame needs both modes set.
 
@@ -53,7 +53,7 @@ Float value equals the number in the name, except letter-spacing (the signed fra
 
 `color/dark-gamma/{step}` aliases `color/gray/980` with opacity. Steps: 040, 080, 120, 160, 200, 320, 440, 560, 720, 880. The stored opacity number matches the step (`040` → 4).
 
-`color/light-gamma/{step}` aliases `color/gray/000` the same way. Steps: 050, 080, 120, 160, 200, 320, 440, 560, 720, 880.
+`color/light-gamma/{step}` aliases `color/gray/000` the same way. Steps: 010, 050, 080, 120, 160, 200, 320, 440, 560, 720, 880. Step `010` is white at 1% opacity. Ghost light focus uses it so the focus shadow can render.
 
 Source default families: primary `Montserrat`, secondary `String value`.
 
@@ -172,7 +172,7 @@ Four button text styles sit outside this ramp. Names and bindings are in [button
 
 ## Components
 
-62 variables, mode `Mode 1`. Button size, gap, radius, stroke, focus ring, and paints. Every color aliases Core. The token list, scopes, and the `button` component are in [button.md](button.md).
+64 variables, mode `Mode 1`. Button size, gap, radius, stroke, focus ring, and paints. Every color aliases Core. The token list, scopes, and the `button` component are in [button.md](button.md).
 
 ## Known gaps to copy as-is
 

@@ -98,12 +98,27 @@ Every fill is one solid paint. Bind it to a single color variable. Do not use a 
 | `button/ghost-light/hover/label` | `color/gray/000` |
 | `button/ghost-light/disabled/stroke` | `color/gray/200` |
 | `button/ghost-light/disabled/label` | `color/gray/200` |
+| `button/ghost-light/focus/fill` | `color/light-gamma/010` |
 | `button/ghost-light/focus/stroke` | `color/gray/000` |
 | `button/ghost-light/focus/label` | `color/gray/000` |
+| `button/focus/gap` | `color/gray/000` |
 
-Ghost light default, focus, and disabled have no fill. Do not invent a fill variable for them. `color/light-gamma/200` is white at 20% opacity.
+Ghost light default and disabled have no fill. Ghost light focus does. Its fill is white at 1% opacity so Figma will draw the focus shadow. `color/light-gamma/200` is white at 20% opacity. `color/light-gamma/010` is white at 1% opacity. Do not remove the focus fill.
 
-Focus keeps that type's default fill and label. Its stroke is a 2px ring, aligned outside, bound to `button/focus-stroke-width`. Primary and ghost light use a white ring. Secondary and ghost dark use `color/blue/500`.
+`button/focus/gap` is scoped to effect color. It is not a fill.
+
+## Focus effect
+
+Two drop shadows on every focus variant. Do not create an effect style.
+
+| Layer | Offset | Blur | Spread | Color |
+| --- | --- | --- | --- | --- |
+| Focus ring | 0, 0 | 0 | 6 | `#5489ff` at 32% opacity |
+| Gap | 0, 0 | 0 | 3 | `button/focus/gap` |
+
+The blue shadow is the focus ring. Leave its color, opacity, and spread.
+
+The gap shadow keeps 3px of the surface color between the button and the blue ring. In the source file that color is white, so the ring is correct only on a white surface. When the button sits on another background, point `button/focus/gap` at that background color. If the gap stays white on a colored surface, it paints a white halo. This token has one value, so every focus variant updates together. A screen with two backgrounds needs the gap set to one of them.
 
 Do not copy example hexes that are not tokens (`#2b85c3`, `#37a6f3`, `#474747`, `#adadad`).
 
@@ -117,7 +132,7 @@ One set named `button`. Variant properties, in order: `size`, `type`, `status`.
 
 Boolean properties, default true: `show left icon`, `show right icon`.
 
-Each variant is a horizontal auto-layout frame. Primary and counter alignment are center. Height is fixed from the size token. Width hugs the label and icons. Bind `strokeTopWeight`, `strokeBottomWeight`, `strokeLeftWeight`, and `strokeRightWeight` to `button/stroke-width`. Focus binds those four sides to `button/focus-stroke-width` and sets `strokeAlign` to `OUTSIDE`. Gap is `button/gap`. Corner radius is `button/radius`.
+Each variant is a horizontal auto-layout frame. Primary and counter alignment are center. Height is fixed from the size token. Width hugs the label and icons. Bind `strokeTopWeight`, `strokeBottomWeight`, `strokeLeftWeight`, and `strokeRightWeight` to `button/stroke-width`. Ghost light focus binds those four sides to `button/focus-stroke-width` and sets `strokeAlign` to `INSIDE`. Gap is `button/gap`. Corner radius is `button/radius`. On every focus variant, add the two drop shadows from Focus effect and bind the gap shadow color to `button/focus/gap`.
 
 Children, in order: left icon instance, text layer named `Label` with the characters `Label`, right icon instance. The booleans control the two icons. The label uses the text style for that size. Icon width and height use that size's `icon` token.
 
