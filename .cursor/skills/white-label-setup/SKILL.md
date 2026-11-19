@@ -77,7 +77,7 @@ Button text styles are in [button.md](references/button.md). The done report cou
 
 ## Button
 
-After the text styles exist, create the Components variables and build or rebind the `button` set from [button.md](references/button.md). Load `figma-generate-library` before creating or rebinding that component. Skip setup builds the same button from the source defaults.
+After the text styles exist, create the Components variables and build or rebind the `button` set from [button.md](references/button.md). Load `figma-generate-library` before creating or rebinding that component. Skip setup builds the same button from the source defaults. Primary fills are solid. Focus is two drop shadows. Do not create an effect style, and do not create a variable for the gap shadow. Ghost light focus uses `color/light-gamma/010`.
 
 ## Done
 
